@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.loading-icon {
+    animation: animate 2s infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply font-sans bg-slate-200;
+    }
+    
+    li {
+        @apply p-4 text-sm
+    }
+
+    h2 {
+        @apply text-xl font-bold;
+    }
+}
+
+@layer components {
+    .bg-gradient {
+        @apply bg-gradient-to-r from-primary to-secondary;
+    }
+
+    .nav-link {
+        @apply p-2 mx-2 bg-slate-300 text-slate-600 rounded-lg;
+    }
+
+    .btn {
+        @apply p-2 rounded-lg;
+    }
+
+    .form-group{
+        @apply mb-4;
+    }
+
+    .form-label{
+        @apply block mb-1 text-sm font-medium text-slate-700;
+    }
+
+    .form-control{
+        @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5;
+    }
+}
